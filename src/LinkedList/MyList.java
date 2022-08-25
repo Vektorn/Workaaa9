@@ -4,15 +4,17 @@ public class MyList {
     public static void main(String[] args) {
         List list = new List();
 
-        list.add(10);
-        list.add(20);
-        list.add(30);
+        list.addFirst(10);
+        list.addFirst(20);
+        list.addLast(30);
+        list.addIndex(40,1);
         list.print();
 
         System.out.println();
+        System.out.println(list.size());
+        System.out.println();
 
-        list.print();
-        System.out.println(list.get(10));
+        System.out.println("finish");
     }
 }
 
