@@ -17,10 +17,18 @@ public class MyStack {
         }
         nums[++top]=data;
     }
-// чомусь не працює
-    public void remove(int index){
-        for (int i = index; i < capacity; i++) {
-            nums[i]=nums[i+1];
+    public void remove(int indexx) {
+        int[] newArr = null;
+        for (int i = 0; i < nums.length-1; i++) {
+            if (nums[i] == indexx) {
+                newArr = new int[nums.length-1];
+                for (int index = 0; index < i; index++) {
+                    newArr[index] = nums[index];
+                }
+                for (int j = i; j < nums.length-1; j++) {
+                    newArr[j] = nums[j + 1];
+                }
+            }
         }
     }
     public int pop(){
@@ -39,6 +47,14 @@ public class MyStack {
          }
         return -1;
      }
+    public void clear(){
+        for (int i = 0; i < nums.length; i++) {
+            nums[i] = 0;
+        }
+        for (int i : nums) {
+            System.out.println(i);
+        }
+    }
      public void display(){
         for (int elem: nums){
             System.out.print(elem + " ");

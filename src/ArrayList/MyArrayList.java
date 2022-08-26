@@ -39,7 +39,7 @@ public class MyArrayList<Tip> {
         list[index]= item;
         size++;
     }
-    public void delete(int index){
+    public void remove(int index){
         if (size == list.length) {
             Tip[] newList = (Tip[]) new Object[list.length + 1];
             for (int i = 0; i < list.length; i++) {
@@ -51,53 +51,18 @@ public class MyArrayList<Tip> {
             list[i]=list[i+1];
         }
     }
-    public void deleteTip(Tip item){
-        if (size == list.length) {
-            Tip[] newList = (Tip[]) new Object[list.length + 1];
-            for (int i = 0; i < list.length; i++) {
-                newList[i] = list[i];
-            }
-            list=newList;
-        }
-        int pos = index(item);
-
-        if (pos < 0){
-            return;
-        }
-        delete(pos);
-    }
     public void display(){
         for (Tip elem: list){
             System.out.print(elem + " ");
         }
     }
-    private int index (Tip item){
-        if (item == null)
-            return -1;
-
-        for (int i = 0; i < size; i++) {
-            if (item.equals(list[i]))
-                return i;
-        }
-        return -1;
-    }
     public Tip get(int index){
 
         return list[index];
     }
-    public void set(int index, Tip item){
-
-        list[index] = item;
-    }
-     public boolean isEmpty(){
-
-        return size==0;
-     }
      public int size(){
-
         return (list.length);
      }
-
      public void clear(){
          for (int i = 0; i < size; i++) {
              list[i]=null;

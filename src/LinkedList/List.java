@@ -4,7 +4,6 @@ public class List {
     private MyLinkedList head;
     private MyLinkedList tail;
 
-
     public List(){
         tail=null;
         head=null;
@@ -106,8 +105,6 @@ public class List {
            cur=cur.next;
        }return count;
     }
-//проблемс вроді
-
     public void clear(){
         MyLinkedList pre = head;
         int position = size();
@@ -120,7 +117,6 @@ public class List {
         pre.next=cur.next;
         cur.next=null;
     }
-
     public void print(){
         MyLinkedList temp = head;
         while (temp != null){

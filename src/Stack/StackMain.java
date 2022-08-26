@@ -9,17 +9,8 @@ public class StackMain {
 
         System.out.println(myStack.size());
 
-        myStack.remove(3);
-
-        System.out.println(myStack.size());
-
+        myStack.remove(0);
         myStack.display();
 
-        if (myStack.isEmpty()) {
-            System.out.println("The stack is empty");
-        }
-        else {
-            System.out.println("The stack is not empty");
-        }
     }
 }

@@ -18,7 +18,7 @@ public class Main {
         myArrayList.add(18);
         myArrayList.add(28);
 
-        myArrayList.delete(4);
+        myArrayList.remove(4);
 
         myArrayList.display();
     }
