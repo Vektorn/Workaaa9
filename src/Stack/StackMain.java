@@ -9,7 +9,7 @@ public class StackMain {
 
         System.out.println(myStack.size());
 
-        myStack.remove(0);
+        myStack.remove(1);
         myStack.display();
 
     }

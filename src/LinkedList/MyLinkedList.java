@@ -4,7 +4,6 @@ public class MyLinkedList {
     public int data;
     public MyLinkedList next;
     public  MyLinkedList prev;
-
     public MyLinkedList(int data){
         this.data=data;
     }

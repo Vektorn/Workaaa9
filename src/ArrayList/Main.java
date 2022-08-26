@@ -3,7 +3,6 @@ package ArrayList;
 public class Main {
     public static void main(String[] args) {
         MyArrayList<Integer>myArrayList =  new MyArrayList<>();
-
         myArrayList.add(1);
         myArrayList.add(3);
         myArrayList.add(5);
@@ -14,12 +13,7 @@ public class Main {
         myArrayList.add(16);
         myArrayList.add(17);
         myArrayList.add(18);
-        myArrayList.add(28);
-        myArrayList.add(18);
-        myArrayList.add(28);
-
         myArrayList.remove(4);
-
         myArrayList.display();
     }
 }

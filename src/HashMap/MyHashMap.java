@@ -1,108 +1,115 @@
 package HashMap;
-public class MyHashMap <K, V> {
+public class MyHashMap<K, V> {
+    private class Entry<K, V> {
         private K key;
         private V value;
-        private MyHashMap<K, V> next;
-        public MyHashMap(K key, V value){
-            this.key = key;
-            this.value = value;
+        private Entry<K, V> next;
+        public Entry(K key, V value) {
+            this.key=key;
+            this.value= value;
         }
-    public K getKey() {
-            return key;
-        }
-        public void setKey(K key) {
-            this.key = key;
+        public K getKey() {
+            return this.key;
         }
         public V getValue() {
-            return value;
+            return this.value;
         }
         public void setValue(V value) {
             this.value = value;
         }
-        public MyHashMap getNext() {
-            return next;
-        }
-        public void setNext(MyHashMap<K, V> next) {
-            this.next = next;
-        }
-        private int capacity = 16;
-        private MyHashMap<K, V>[] table;
-        public void CustomHashMap(){
-            table = new MyHashMap[capacity];
-        }
-        public void CustomHashMap(int capacity){
-            this.capacity = capacity;
-            table = new MyHashMap[capacity];
-        }
-        public void put(K key, V value){
-            int index = index(key);
-            MyHashMap newEntry = new MyHashMap(key, value);
-            if(table[index] == null){
-                table[index] = newEntry;
-            }else {
-                MyHashMap<K, V> previousNode = null;
-                MyHashMap<K, V> currentNode = table[index];
-                while(currentNode != null){
-                    if(currentNode.getKey().equals(key)){
-                        currentNode.setValue(value);
-                        break;
-                    }
-                    previousNode = currentNode;
-                    currentNode = currentNode.getNext();
-                }
-                if(previousNode != null)
-                    previousNode.setNext(newEntry);
+        @Override
+        public String toString() {
+            Entry<K, V> temp = this;
+            StringBuilder sd = new StringBuilder();
+            while (temp != null) {
+                sd.append(temp.key + " -> " + temp.value + ",");
+                temp = temp.next;
             }
-        }
-        public V get(K key){
-            V value = null;
-            int index = index(key);
-            MyHashMap<K, V> entry = table[index];
-            while (entry != null){
-                if(entry.getKey().equals(key)) {
-                    value = entry.getValue();
-                    break;
-                }
-                entry = entry.getNext();
-            }
-            return value;
-        }
-        public void remove(K key){
-            int index = index(key);
-            MyHashMap previous = null;
-            MyHashMap entry = table[index];
-            while (entry != null){
-                if(entry.getKey().equals(key)){
-                    if(previous == null){
-                        entry = entry.getNext();
-                        table[index] = entry;
-                        return;
-                    }else {
-                        previous.setNext(entry.getNext());
-                        return;
-                    }
-                }
-                previous = entry;
-                entry = entry.getNext();
-            }
-        }
-        public void display(){
-            for(int i = 0; i < capacity; i++){
-                if(table[i] != null){
-                    MyHashMap<K, V> currentNode = table[i];
-                    while (currentNode != null){
-                        System.out.println(String.format("Key is %s and value is %s", currentNode.getKey(), currentNode.getValue()));
-                        currentNode = currentNode.getNext();
-                    }
-                }
-            }
-        }
-
-        private int index(K key){
-            if(key == null){
-                return 0;
-            }
-            return Math.abs(key.hashCode() % capacity);
+            return sd.toString();
         }
     }
-
+    private final int SIZE = 5;
+    private Entry<K, V> table[];
+    private int count = 0;
+    public MyHashMap() {
+        table= new Entry[SIZE];
+    }
+    public void put(K key,V value) {
+        int hash = key.hashCode() % SIZE;
+        Entry<K, V> e = table[hash];
+        if (e==null) {
+            table[hash] = new Entry<>(key, value);
+        }else {
+            while (e.next != null) {
+                if (e.getKey()==key) {
+                    e.setValue(value);
+                    return;
+                }
+                e = e.next;
+            }
+            if (e.getKey() == key) {
+                e.setValue(value);
+                return;
+            }
+            e.next = new Entry<K, V>(key, value);
+        }
+        count++;
+    }
+    public V get(K key) {
+        int hash = key.hashCode() % SIZE;
+        Entry<K, V> e = table[hash];
+        if (e == null) {
+            return null;
+        }
+        while(e != null) {
+            if(e.getKey()==key) {
+                return e.getValue();
+            }
+            e = e.next;
+        }
+        return null;
+    }
+    public  Entry<K, V> remove(K key) {
+        count--;
+        int hash = key.hashCode() % SIZE;
+        Entry<K, V> e = table[hash];
+        if (e == null) {
+            return null;
+        }
+        if (e.getKey() == key) {
+            table[hash]=e.next;
+            e.next= null;
+            return e;
+        }
+        Entry<K, V> prev = e;
+        e=e.next;
+        while(e !=null) {
+            if(e.getKey()==key) {
+                prev.next = e.next;
+                e.next = null;
+                return e;
+            }
+            prev = e;
+            e=e.next;
+        }
+        return null;
+    }
+    public int size() {
+        return count;
+    }
+    public void clear() {
+        table= new Entry[SIZE];
+        count=0;
+    }
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        for (int i=0; i<SIZE;i++) {
+            if (table[i] != null) {
+                sb.append(i + " " + table[i]+ "\n");
+            } else {
+                sb.append(i + " " +"null"+ "\n");
+            }
+        }
+        return sb.toString();
+    }
+}

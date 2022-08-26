@@ -17,19 +17,14 @@ public class MyStack {
         }
         nums[++top]=data;
     }
-    public void remove(int indexx) {
-        int[] newArr = null;
-        for (int i = 0; i < nums.length-1; i++) {
-            if (nums[i] == indexx) {
-                newArr = new int[nums.length-1];
-                for (int index = 0; index < i; index++) {
-                    newArr[index] = nums[index];
-                }
-                for (int j = i; j < nums.length-1; j++) {
-                    newArr[j] = nums[j + 1];
-                }
-            }
+    public void remove(int index) {
+        if (index>=capacity)
+            return;
+        nums[index]=0;
+        for (int i = index; i <nums.length-1 ; i++) {
+            nums[i]=nums[i+1];
         }
+        nums[nums.length-1]=0;
     }
     public int pop(){
         if (isEmpty())        {

@@ -39,19 +39,15 @@ public class MyQueue {
         arr[rear] = item;
         count++;
     }
-    public void remove(int indexx) {
-        int[] newArr = null;
-        for (int i = 0; i < arr.length-1; i++) {
-            if (arr[i] == indexx) {
-                newArr = new int[arr.length-1];
-                for (int index = 0; index < i; index++) {
-                    newArr[index] = arr[index];
-                }
-                for (int j = i; j < arr.length-1; j++) {
-                    newArr[j] = arr[j + 1];
-                }
-            }
+    public void remove(int index) {
+       if (index>=count)
+           return;
+       arr[index]=0;
+        for (int i = index; i <arr.length-1 ; i++) {
+            arr[i]=arr[i+1];
         }
+        arr[arr.length-1]=0;
+        rear--;
     }
     public int peek()    {
         if (isEmpty())        {

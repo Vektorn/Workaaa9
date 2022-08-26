@@ -11,14 +11,12 @@ public class List {
     public boolean isEmpty(){
         return head== null;
     }
-
     public void addFirst (int data){
         MyLinkedList temp = new MyLinkedList(data);
         if (isEmpty())
             tail=temp;
         else
             head.prev=temp;
-
         temp.next=head;
         head=temp;
     }
@@ -28,24 +26,8 @@ public class List {
             head=temp;
         else
             tail.next=temp;
-
         temp.prev =tail;
         tail=temp;
-    }
-
-    public void addIndex(int data, int index){
-        MyLinkedList cur = head;
-        int t =0;
-
-        while (cur!=null&& t!=index){
-             cur=cur.next;
-             t++;
-        }
-        MyLinkedList temp = new MyLinkedList(data);
-        cur.prev.next=temp;
-        temp.prev=cur.prev;
-        cur.prev=temp;
-        temp.next=cur;
     }
     public void removeFirst(){
         if (head.next==null){
@@ -62,14 +44,10 @@ public class List {
             tail.prev.next=null;
         tail=tail.prev;
     }
-
-    public void removeAt(int elem){
+    public void removeAt(int index){
         MyLinkedList cur = head;
-
-        while (cur.data !=elem){
-
+        while (cur.data !=index){
             cur = cur.next;
-
             if (cur == null)
                 return;
         }
@@ -83,13 +61,12 @@ public class List {
         else
             cur.next.prev=cur.prev;
     }
-
-    public int get(int key){
+    public int get(int index){
         MyLinkedList temp = head;
         int cc = 0;
 
         while (temp != null){
-            if (temp.data == key)
+            if (temp.data == index)
                 return cc;
 
             temp = temp.next;

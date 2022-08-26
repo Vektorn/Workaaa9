@@ -2,7 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a0aa0161-42d0-4025-9307-77cd8eea2e21" name="Changes" comment="first commit">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ArrayList/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ArrayList/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ArrayList/MyArrayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ArrayList/MyArrayList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/HashMap/HashMapMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HashMap/HashMapMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HashMap/MyHashMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HashMap/MyHashMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LinkedList/List.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LinkedList/List.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LinkedList/MyList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LinkedList/MyList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Queue/MyQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Queue/MyQueue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Queue/QueueMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Queue/QueueMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Stack/MyStack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Stack/MyStack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Stack/StackMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Stack/StackMain.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +90,7 @@
     "settings.editor.selected.configurable": "configurable.group.appearance"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.StackMain">
+  <component name="RunManager" selected="Application.MyList">
     <configuration name="HashMapMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="HashMap.HashMapMain" />
       <module name="Work9" />
@@ -148,11 +158,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.StackMain" />
-        <item itemvalue="Application.QueueMain" />
+        <item itemvalue="Application.MyList" />
         <item itemvalue="Application.HashMapMain" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.MyList" />
+        <item itemvalue="Application.StackMain" />
+        <item itemvalue="Application.QueueMain" />
       </list>
     </recent_temporary>
   </component>
@@ -186,7 +196,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661531472527</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="first commit">
+      <created>1661531902476</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1661531902476</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -213,5 +230,9 @@
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
