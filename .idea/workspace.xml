@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a0aa0161-42d0-4025-9307-77cd8eea2e21" name="Changes" comment="first commit">
-      <change afterPath="$PROJECT_DIR$/src/LinkedList/LinkedNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ArrayList/MyArrayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ArrayList/MyArrayList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LinkedList/List.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LinkedList/MyLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LinkedList/MyLinkedList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LinkedList/MyList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LinkedList/LinkedListMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Queue/MyQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Queue/MyQueue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Queue/QueueMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Queue/QueueMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Stack/MyStack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Stack/MyStack.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Stack/StackMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Stack/StackMain.java" afterDir="false" />
-    </list>
+    <list default="true" id="a0aa0161-42d0-4025-9307-77cd8eea2e21" name="Changes" comment="last commit" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -202,7 +191,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661531902476</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="last commit">
+      <created>1661624113498</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1661624113498</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -218,7 +214,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="first commit" />
+    <MESSAGE value="last commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="last commit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
