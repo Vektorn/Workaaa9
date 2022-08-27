@@ -2,13 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a0aa0161-42d0-4025-9307-77cd8eea2e21" name="Changes" comment="first commit">
+      <change afterPath="$PROJECT_DIR$/src/LinkedList/LinkedNode.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ArrayList/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ArrayList/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ArrayList/MyArrayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ArrayList/MyArrayList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HashMap/HashMapMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HashMap/HashMapMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HashMap/MyHashMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HashMap/MyHashMap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LinkedList/List.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LinkedList/List.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LinkedList/MyList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LinkedList/MyList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LinkedList/List.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LinkedList/MyLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LinkedList/MyLinkedList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LinkedList/MyList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LinkedList/LinkedListMain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Queue/MyQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Queue/MyQueue.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Queue/QueueMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Queue/QueueMain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Stack/MyStack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Stack/MyStack.java" afterDir="false" />
@@ -87,16 +86,29 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "configurable.group.appearance"
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.MyList">
+  <component name="RunManager" selected="Application.LinkedListMain">
     <configuration name="HashMapMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="HashMap.HashMapMain" />
       <module name="Work9" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="HashMap.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LinkedListMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="LinkedList.LinkedListMain" />
+      <module name="Work9" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="LinkedList.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -130,19 +142,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="QueueMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Queue.QueueMain" />
-      <module name="Work9" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Queue.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="StackMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Stack.StackMain" />
       <module name="Work9" />
@@ -158,11 +157,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.MyList" />
+        <item itemvalue="Application.LinkedListMain" />
+        <item itemvalue="Application.LinkedList.MyList" />
         <item itemvalue="Application.HashMapMain" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.StackMain" />
-        <item itemvalue="Application.QueueMain" />
       </list>
     </recent_temporary>
   </component>

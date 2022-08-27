@@ -40,7 +40,7 @@ public class MyArrayList<Tip> {
         return list[index];
     }
      public int size(){
-        return (list.length);
+        return size;
      }
     public void display(){
         for (Tip elem: list){

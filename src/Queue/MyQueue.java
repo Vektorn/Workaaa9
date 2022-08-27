@@ -1,33 +1,33 @@
 package Queue;
 
-public class MyQueue {
-    private final int[] arr;
+public class MyQueue<T> {
+    private final T[] arr;
     private int front;
     private int rear;
     private final int capacity;
     private int count;
 
     public MyQueue(int size){
-        this.arr = new int[size];
+        this.arr = (T[]) new Object[size];
         this.capacity = size;
         this.front = 0;
         this.rear = -1;
         this.count = 0;
     }
-    public int poll()
+    public T poll()
     {
         if (isEmpty())
         {
             System.out.println("Underflow\nProgram Terminated");
             System.exit(-1);
         }
-        int x = arr[front];
+        T x = arr[front];
         System.out.println("Removing " + x);
         front = (front + 1) % capacity;
         count--;
         return x;
     }
-    public void add(int item)
+    public void add(T item)
     {
         if (isFull())
         {
@@ -42,14 +42,14 @@ public class MyQueue {
     public void remove(int index) {
        if (index>=count)
            return;
-       arr[index]=0;
+       arr[index]=null;
         for (int i = index; i <arr.length-1 ; i++) {
             arr[i]=arr[i+1];
         }
-        arr[arr.length-1]=0;
+        arr[arr.length-1]=null;
         rear--;
     }
-    public int peek()    {
+    public T peek()    {
         if (isEmpty())        {
             System.out.println("Underflow\nProgram Terminated");
             System.exit(-1);
@@ -58,9 +58,9 @@ public class MyQueue {
     }
     public void clear(){
         for (int i = 0; i < arr.length; i++) {
-            arr[i] = 0;
+            arr[i] = null;
         }
-        for (int i : arr) {
+        for (T i : arr) {
             System.out.println(i);
         }
     }
