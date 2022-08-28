@@ -10,13 +10,16 @@ public class MyStack<T> {
         this.capacity=size;
         this.top=-1;
     }
-    public void push (T data){
-        if (isFull())        {
-            System.out.println("Overflow\nProgram Terminated\n");
-            System.exit(-1);
+    public void push (T data) {
+        if (capacity == nums.length) {
+            T[] newNums = (T[]) new Object[nums.length + 1];
+            for (int i = 0; i < nums.length; i++) {
+                newNums[i] = nums[i];
+            }
+            nums = newNums;
         }
-        nums[++top]=data;
-    }
+            nums[++top] = data;
+        }
     public void remove(int index) {
         if (index>=capacity)
             return;
@@ -25,6 +28,7 @@ public class MyStack<T> {
             nums[i]=nums[i+1];
         }
         nums[nums.length-1]=null;
+        capacity--;
     }
     public T pop(){
         if (isEmpty())        {
@@ -46,6 +50,7 @@ public class MyStack<T> {
         for (int i = 0; i < nums.length; i++) {
             nums[i] = null;
         }
+        capacity=0;
         for (T i : nums) {
             System.out.println(i);
         }

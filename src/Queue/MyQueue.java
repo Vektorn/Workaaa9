@@ -1,55 +1,49 @@
 package Queue;
 
 public class MyQueue<T> {
-    private final T[] arr;
+    private T[] arr;
     private int front;
     private int rear;
-    private final int capacity;
     private int count;
 
     public MyQueue(int size){
         this.arr = (T[]) new Object[size];
-        this.capacity = size;
         this.front = 0;
         this.rear = -1;
         this.count = 0;
     }
-    public T poll()
-    {
-        if (isEmpty())
-        {
-            System.out.println("Underflow\nProgram Terminated");
-            System.exit(-1);
-        }
-        T x = arr[front];
-        System.out.println("Removing " + x);
-        front = (front + 1) % capacity;
-        count--;
-        return x;
-    }
-    public void add(T item)
-    {
-        if (isFull())
-        {
-            System.out.println("Overflow\nProgram Terminated");
-            System.exit(-1);
+    public T poll() {
+            T x = arr[front];
+            System.out.println("Removing " + x);
+            front = (front + 1) % arr.length;
+            count--;
+            return x;
+}
+    public void add(T item){
+        if (count == arr.length) {
+            T[] newArr = (T[]) new Object[arr.length + 1];
+            for (int i = 0; i < arr.length; i++) {
+                newArr[i] = arr[i];
+            }
+            arr = newArr;
         }
         System.out.println("Inserting " + item);
-        rear = (rear + 1) % capacity;
+        rear = (rear + 1) % arr.length;
         arr[rear] = item;
         count++;
     }
     public void remove(int index) {
-       if (index>=count)
-           return;
-       arr[index]=null;
-        for (int i = index; i <arr.length-1 ; i++) {
-            arr[i]=arr[i+1];
+            if (index >= count)
+                return;
+            arr[index] = null;
+            for (int i = index; i < arr.length - 1; i++) {
+                arr[i] = arr[i + 1];
+            }
+            arr[arr.length - 1] = null;
+            rear--;
+            count--;
         }
-        arr[arr.length-1]=null;
-        rear--;
-    }
-    public T peek()    {
+    public T peek(){
         if (isEmpty())        {
             System.out.println("Underflow\nProgram Terminated");
             System.exit(-1);
@@ -60,6 +54,7 @@ public class MyQueue<T> {
         for (int i = 0; i < arr.length; i++) {
             arr[i] = null;
         }
+        count = 0;
         for (T i : arr) {
             System.out.println(i);
         }
@@ -71,6 +66,6 @@ public class MyQueue<T> {
         return (size() == 0);
     }
     public boolean isFull() {
-        return (size() == capacity);
+        return (size() == arr.length);
     }
 }

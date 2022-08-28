@@ -8,19 +8,12 @@ public class MyLinkedList<T> {
         tail=null;
         head=null;
     }
+
     public boolean isEmpty(){
-        return head== null;
+        return head == null;
     }
-    public void addFirst (T data){
-        LinkedNode<T> temp = new LinkedNode<T>(data);
-        if (isEmpty())
-            tail=temp;
-        else
-            head.prev=temp;
-        temp.next=head;
-        head=temp;
-    }
-    public void addLast (T data){
+
+    public void add(T data){
         LinkedNode<T> temp = new LinkedNode<T>(data);
         if (isEmpty())
             head=temp;
@@ -29,6 +22,7 @@ public class MyLinkedList<T> {
         temp.prev =tail;
         tail=temp;
     }
+
     public void removeFirst(){
         if (head.next==null){
             tail=null;
@@ -65,9 +59,10 @@ public class MyLinkedList<T> {
         LinkedNode<T> temp = head;
         int cc = 0;
         for (int i = 0; i < index ; i++) {
-            temp = temp.next;
             if (temp == null)
                 return null;
+
+            temp = temp.next;
         }
         return temp.data;
     }
@@ -80,18 +75,11 @@ public class MyLinkedList<T> {
         }
         return count;
     }
+
     public void clear(){
-        LinkedNode<T> pre = head;
-        int position = size();
-        int coutn = 1;
-        while (coutn <position-1){
-            pre=pre.next;
-            coutn++;
-        }
-        LinkedNode<T> cur = pre.next;
-        pre.next=cur.next;
-        cur.next=null;
+        head = null;
     }
+
     public void print(){
         LinkedNode<T> temp = head;
         while (temp != null){

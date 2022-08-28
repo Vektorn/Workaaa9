@@ -8,8 +8,12 @@ public class QueueMain {
         myQueue.add(19);
         myQueue.add(118);
         myQueue.add(15);
+        myQueue.add(15);
+        myQueue.add(15);
+        myQueue.add(15);
+        myQueue.poll();
 
-        myQueue.remove(1);
+
         myQueue.add(4141);
     }
 }
